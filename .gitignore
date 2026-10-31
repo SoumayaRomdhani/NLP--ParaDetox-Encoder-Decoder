@@ -1,0 +1,11 @@
+__pycache__/
+.ipynb_checkpoints/
+.env
+.env.*
+*.pt
+*.pth
+*.ckpt
+data/
+checkpoints/
+models/
+runs/
