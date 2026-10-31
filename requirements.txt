@@ -1,0 +1,11 @@
+# Dependency ranges taken from the uploaded executed notebook
+# GPU-enabled PyTorch should be installed according to the runtime/CUDA setup.
+torch>=2.6,<3
+numpy>=1.26,<3
+pandas>=2.1,<4
+sentencepiece>=0.2,<0.3
+sacrebleu>=2.4,<3
+matplotlib>=3.8,<4
+transformers>=4.40,<6
+sentence-transformers>=3,<7
+ipywidgets>=8,<9
