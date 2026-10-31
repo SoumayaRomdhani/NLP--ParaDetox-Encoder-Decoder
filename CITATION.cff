@@ -1,0 +1,7 @@
+message: Please cite the original ParaDetox dataset publication.
+title: ParaDetox - Encoder-Decoder Text Detoxification
+authors:
+  - family-names: ROMDHANI
+    given-names: Soumaya
+version: 1.0.0
+repository-code: https://github.com/SoumayaRomdhani/NLP--ParaDetox-Encoder-Decoder
