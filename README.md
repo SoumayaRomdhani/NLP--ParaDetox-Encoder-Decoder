@@ -99,7 +99,7 @@ Given a potentially toxic source sentence `x`, the model must produce a neutral 
 
 **Observed success**
 
-`~~~
+```
 Input   "Your idea is stupid."
 Output  "Your idea is bad."
 ~~~`
@@ -123,7 +123,7 @@ where each target subword is predicted using the source and previously generated
 </p>
 <p align="center"><sub>Figure — Model pipeline exported from the executed experiment notebook.</sub></p>
 
-`~~~text
+```text
 ParaDetox parallel corpus
           │
           ▼
@@ -399,7 +399,7 @@ These are **proposed improvements**, not features already implemented or experim
 
 ### 1 — Clone and install
 
-`~~~bash
+```bash
 git clone https://github.com/SoumayaRomdhani/NLP--ParaDetox-Encoder-Decoder.git
 cd NLP--ParaDetox-Encoder-Decoder
 
@@ -428,7 +428,7 @@ For details, see [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
 
 ## Documentation and repository map
 
-`~~~text
+```text
 NLP--ParaDetox-Encoder-Decoder/
 ├── README.md
 ├── requirements.txt
