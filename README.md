@@ -108,9 +108,9 @@ The evaluation is intentionally more demanding than classifying a sentence as to
 
 Formally, the models approximate the conditional distribution
 
-$$
-P_\theta(y\mid x) = \prod_{t=1}^{m} P_\theta(y_t\mid y_{<t}, x)
-$$
+```math
+P_{\theta}(y \mid x) = \prod_{t=1}^{m} P_{\theta}(y_t \mid y_{1:t-1}, x)
+```
 
 where each target subword is predicted using the source and previously generated target tokens.
 
@@ -208,11 +208,9 @@ The one-layer **bidirectional LSTM encoder** processes each source sentence in b
 
 At each generation step, the decoder scores encoder hidden states, masks padded source positions, and computes a weighted context vector:
 
-$$
-\alpha_{t,i} = \mathrm{softmax}_i(e_{t,i}),
-\qquad
-z_t = \sum_i \alpha_{t,i}h_i
-$$
+```math
+\alpha_{t,i} = \mathrm{softmax}_i(e_{t,i}), \qquad z_t = \sum_i \alpha_{t,i} h_i
+```
 
 The model can consult different parts of the input as the output unfolds, rather than relying only on a final encoder state.
 
@@ -220,11 +218,9 @@ The model can consult different parts of the input as the output unfolds, rather
 
 The pointer mechanism learns a generation / copy gate and combines two token distributions:
 
-$$
-P(w\mid t) =
-g_t P_{\mathrm{vocab}}(w\mid t)
-+ (1-g_t)\sum_{i:x_i=w}\alpha_{t,i}
-$$
+```math
+P(w \mid t) = g_t P_{\mathrm{vocab}}(w \mid t) + (1-g_t) \sum_{i:x_i=w} \alpha_{t,i}
+```
 
 Repeated source subwords are aggregated using `scatter_add`. The mechanism is useful for retaining source details, but **copying offensive words is an inherent risk**.
 
