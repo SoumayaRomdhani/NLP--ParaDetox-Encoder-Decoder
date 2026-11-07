@@ -102,7 +102,7 @@ Given a potentially toxic source sentence `x`, the model must produce a neutral 
 ```
 Input   "Your idea is stupid."
 Output  "Your idea is bad."
-~~~`
+```
 
 The evaluation is intentionally more demanding than classifying a sentence as toxic / non-toxic: the system must **generate** a usable alternative.
 
@@ -148,7 +148,7 @@ Greedy / Beam / Safe reranking
           │
           ▼
 Held-out evaluation + qualitative diagnostics
-~~~`
+```
 
 The **generative networks are initialized randomly and trained from scratch**. Pretrained RoBERTa / sentence-embedding models are used **only as evaluation instruments**, never to generate or rewrite sentences.
 
@@ -404,7 +404,7 @@ git clone https://github.com/SoumayaRomdhani/NLP--ParaDetox-Encoder-Decoder.git
 cd NLP--ParaDetox-Encoder-Decoder
 
 python -m pip install -r requirements.txt
-~~~`
+```
 
 ### 2 — Open the research notebook
 
@@ -456,7 +456,7 @@ NLP--ParaDetox-Encoder-Decoder/
     ├── REPRODUCIBILITY.md       # Environment and rerun guidance
     ├── Technical_Report.pdf     # Academic technical report (FR)
     └── Presentation.pdf         # Final presentation (FR)
-~~~`
+```
 
 | Start here | Read this for… |
 |:--|:--|
