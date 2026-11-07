@@ -55,22 +55,22 @@
 <table>
 <tr>
 <td width="50%" valign="top">
-
-**The work**
-- A full supervised NLP pipeline, from raw data to evaluation.
-- Three custom-built generative architectures.
-- Greedy decoding, beam search and candidate reranking.
-- Quantitative comparison **and** real error analysis.
-
+<strong>The work</strong>
+<ul>
+  <li>A full supervised NLP pipeline, from raw data to evaluation.</li>
+  <li>Three custom-built generative architectures.</li>
+  <li>Greedy decoding, beam search and candidate reranking.</li>
+  <li>Quantitative comparison <strong>and</strong> real error analysis.</li>
+</ul>
 </td>
 <td width="50%" valign="top">
-
-**The key finding**
-- Attention is essential for the small recurrent models studied here.
-- Copying can help preserve information, **but may also retain toxicity**.
-- Decoding choices change the final quality trade-off.
-- Lower toxicity alone does **not** mean a good paraphrase.
-
+<strong>The key finding</strong>
+<ul>
+  <li>Attention is essential for the small recurrent models studied here.</li>
+  <li>Copying can help preserve information, <strong>but may also retain toxicity</strong>.</li>
+  <li>Decoding choices change the final quality trade-off.</li>
+  <li>Lower toxicity alone does <strong>not</strong> mean a good paraphrase.</li>
+</ul>
 </td>
 </tr>
 </table>
@@ -209,7 +209,7 @@ The one-layer **bidirectional LSTM encoder** processes each source sentence in b
 At each generation step, the decoder scores encoder hidden states, masks padded source positions, and computes a weighted context vector:
 
 $$
-\alpha_{t,i} = \operatorname{softmax}_i(e_{t,i}),
+\alpha_{t,i} = \mathrm{softmax}_i(e_{t,i}),
 \qquad
 z_t = \sum_i \alpha_{t,i}h_i
 $$
@@ -365,28 +365,26 @@ These examples come from *selected diagnostic prompts* (60 initial + 40 addition
 <table>
 <tr>
 <td width="50%" valign="top">
-
-**Current limitations**
-
-- Moderate corpus size and 2,000-subword vocabulary.
-- Only **one training seed** in the reported comparison.
-- Weaknesses on idioms, grammar, negations, dates and decimals.
-- Automatic toxicity and similarity models can miss meaningful errors.
-- No full independent blind human evaluation.
-- Extended Attention varies more than one experimental factor.
-
+<strong>Current limitations</strong>
+<ul>
+  <li>Moderate corpus size and 2,000-subword vocabulary.</li>
+  <li>Only <strong>one training seed</strong> in the reported comparison.</li>
+  <li>Weaknesses on idioms, grammar, negations, dates and decimals.</li>
+  <li>Automatic toxicity and similarity models can miss meaningful errors.</li>
+  <li>No full independent blind human evaluation.</li>
+  <li>Extended Attention varies more than one experimental factor.</li>
+</ul>
 </td>
 <td width="50%" valign="top">
-
-**Research directions**
-
-- Repeat training across several seeds and report uncertainty.
-- Add independent human ratings for style, fidelity and fluency.
-- Improve idiom-aware and phrase-level transformations.
-- Strengthen number, named-entity and negation consistency checks.
-- Assess robustness on new domains and difficult test sets.
-- Explore coverage or better-grounded factual constraints.
-
+<strong>Research directions</strong>
+<ul>
+  <li>Repeat training across several seeds and report uncertainty.</li>
+  <li>Add independent human ratings for style, fidelity and fluency.</li>
+  <li>Improve idiom-aware and phrase-level transformations.</li>
+  <li>Strengthen number, named-entity and negation consistency checks.</li>
+  <li>Assess robustness on new domains and difficult test sets.</li>
+  <li>Explore coverage or better-grounded factual constraints.</li>
+</ul>
 </td>
 </tr>
 </table>
